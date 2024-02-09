@@ -4,7 +4,7 @@ const Pricing = () => {
   return (
     <>
       <Navbar />
-      <div>Pricing</div>;
+      <div>Pricing</div>
     </>
   );
 };
