@@ -4,7 +4,7 @@ import { Signpost } from "@phosphor-icons/react"; //Licence: MIT
 const Navbar = () => {
   return (
     <>
-      <div className="navbar mx-auto max-w-[1160px] px-10 shadow-xl bg-transparent backdrop-blur-md">
+      <div className="navbar mx-auto rounded-md max-w-[1160px] px-10 shadow-xl bg-transparent backdrop-blur-md">
         <div className="navbar-start">
           <NavLink to="/">
             <div className="flex items-center gap-2">
@@ -19,9 +19,6 @@ const Navbar = () => {
             <ul className="menu menu-horizontal px-1">
               <li>
                 <NavLink to="/features">Features</NavLink>
-              </li>
-              <li>
-                <NavLink to="/pricing">Pricing</NavLink>
               </li>
               <li>
                 <NavLink to="/app">App</NavLink>

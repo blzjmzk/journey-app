@@ -5,7 +5,6 @@ const Login = () => {
   return (
     <>
       <Navbar />
-
       <div>Login</div>
     </>
   );
