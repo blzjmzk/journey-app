@@ -1,12 +1,12 @@
 import Navbar from "../components/Navbar";
 
-const Product = () => {
+const Features = () => {
   return (
     <>
       <Navbar />
-      <div>Product</div>
+      <div>Features</div>
     </>
   );
 };
 
-export default Product;
+export default Features;

@@ -4,10 +4,13 @@ import { Signpost } from "@phosphor-icons/react"; //Licence: MIT
 const Navbar = () => {
   return (
     <>
-      <div className="navbar max-w-[1150px] mx-auto px-10 shadow-xl">
+      <div className="navbar mx-auto max-w-[1160px] px-10 shadow-xl bg-transparent backdrop-blur-md">
         <div className="navbar-start">
           <NavLink to="/">
-            <Signpost size={50} weight="fill" />
+            <div className="flex items-center gap-2">
+              <Signpost size={50} weight="fill" />
+              <h2>Journey Tracker</h2>
+            </div>
           </NavLink>
         </div>
 
@@ -15,13 +18,16 @@ const Navbar = () => {
           <div className="hidden sm:flex">
             <ul className="menu menu-horizontal px-1">
               <li>
-                <NavLink to="/">Home</NavLink>
+                <NavLink to="/features">Features</NavLink>
               </li>
               <li>
                 <NavLink to="/pricing">Pricing</NavLink>
               </li>
               <li>
-                <NavLink to="/product">Product</NavLink>
+                <NavLink to="/app">App</NavLink>
+              </li>
+              <li>
+                <NavLink to="/login">Log in</NavLink>
               </li>
             </ul>
           </div>
