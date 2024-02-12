@@ -4,7 +4,9 @@ const Features = () => {
   return (
     <>
       <Navbar />
-      <div>Features</div>
+      <div className="h-lvh flex items-center font-bold justify-center text-xl text- bg-gradient-to-r from-sky-500 to-indigo-500">
+        Features
+      </div>
     </>
   );
 };
