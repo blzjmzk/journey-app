@@ -16,7 +16,7 @@ const App = () => {
         <Route path="login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="app" element={<AppLayout />}>
-          <Route index element={<p className="text-white">LIST</p>} />
+          <Route index element={<Cities />} />
           <Route path="cities" element={<Cities />} />
           <Route path="countries" element={<Countries />} />
           <Route path="form" element={<Form />} />

@@ -1,0 +1,64 @@
+{
+  "cities": [
+    {
+      "cityName": "Tokyo",
+      "country": "Japan",
+      "emoji": "🇯🇵",
+      "date": "2028-05-20T12:45:00.000Z",
+      "notes": "Incredible city!",
+      "position": {
+        "lat": 35.6895,
+        "lng": 139.6917
+      },
+      "id": 87456321
+    },
+    {
+      "cityName": "New York City",
+      "country": "United States",
+      "emoji": "🇺🇸",
+      "date": "2028-02-28T18:30:00.000Z",
+      "notes": "The city that never sleeps!",
+      "position": {
+        "lat": 40.7128,
+        "lng": -74.006
+      },
+      "id": 65892413
+    },
+    {
+      "cityName": "Sydney",
+      "country": "Australia",
+      "emoji": "🇦🇺",
+      "date": "2028-10-15T09:00:00.000Z",
+      "notes": "Absolutely stunning!",
+      "position": {
+        "lat": -33.8688,
+        "lng": 151.2093
+      },
+      "id": 32548796
+    },
+    {
+      "cityName": "Paris",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2027-11-11T15:30:00.000Z",
+      "notes": "City of love and lights!",
+      "position": {
+        "lat": 48.8566,
+        "lng": 2.3522
+      },
+      "id": 78523641
+    },
+    {
+      "cityName": "Rio de Janeiro",
+      "country": "Brazil",
+      "emoji": "🇧🇷",
+      "date": "2028-07-01T08:00:00.000Z",
+      "notes": "Beautiful!",
+      "position": {
+        "lat": -22.9068,
+        "lng": -43.1729
+      },
+      "id": 45213698
+    }
+  ]
+}
