@@ -5,7 +5,6 @@ import Sidebar from "../components/Sidebar";
 const AppLayout = () => {
   return (
     <>
-      <Navbar />
       <div className="flex">
         <Sidebar />
         <Map />

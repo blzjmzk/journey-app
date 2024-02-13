@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -12,6 +12,9 @@ const Sidebar = () => {
         </li>
       </ul>
       <Outlet />
+      <Link to="/">
+        <button className="btn btn-neutral">Homepage</button>
+      </Link>
     </div>
   );
 };
