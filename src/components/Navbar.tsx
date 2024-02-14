@@ -4,7 +4,7 @@ import { Signpost } from "@phosphor-icons/react"; //Licence: MIT
 const Navbar = () => {
   return (
     <>
-      <div className="navbar mx-auto rounded-md px-10 xl:px-40 bg-base-100 ">
+      <div className="navbar mx-auto rounded-md px-10 xl:px-40">
         <div className="navbar-start">
           <NavLink to="/">
             <div className="flex items-center gap-2">
@@ -28,7 +28,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <div className="dropdown">
+          <div className="dropdown dropdown-left">
             <div tabIndex={0} role="button" className="btn btn-ghost sm:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

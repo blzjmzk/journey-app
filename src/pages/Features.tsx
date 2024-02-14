@@ -3,11 +3,14 @@ import Navbar from "../components/Navbar";
 const Features = () => {
   return (
     <>
-      <div className="h-screen flex-col brightness-90 bg-[url(https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2842&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-no-repeat bg-cover bg-center">
-        <Navbar />
-        <div className="flex mt-[100px] justify-center h-screen text-5xl font-bold">
-          <p className="p-5 h-fit rounded-sm bg-base-100">Features Page</p>
-        </div>
+      <div className="absolute top-0 -z-10 h-full w-full bg-white">
+        <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div>
+      </div>
+      <Navbar />
+      <div className="flex flex-col justify-center items-center mt-[200px]">
+        <h2 className="font-black text-4xl p-12 md:text-6xl">
+          Explore the features
+        </h2>
       </div>
     </>
   );
