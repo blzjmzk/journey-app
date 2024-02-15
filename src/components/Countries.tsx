@@ -37,8 +37,8 @@ const Countries = ({ cities, isLoading }: Props) => {
     <ul>
       {countries.map((country, index) => (
         <li className="text-base-100" key={index}>
-          <div className="grid grid-cols-2">
-            <div>{country.emoji}</div>
+          <div className="place-items-center grid grid-cols-[15%_85%]">
+            <div className="py-2">{country.emoji}</div>
             <div>{country.country}</div>
           </div>
         </li>

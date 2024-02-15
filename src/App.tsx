@@ -7,6 +7,7 @@ import PageNotFound from "./pages/PageNotFound";
 import Cities from "./components/Cities";
 import Countries from "./components/Countries";
 import { useEffect, useState } from "react";
+import CityCard from "./components/CityCard";
 
 const BASE_URL = "http://localhost:9000";
 
@@ -46,6 +47,7 @@ const App = () => {
             path="cities"
             element={<Cities cities={cities} isLoading={isLoading} />}
           />
+          <Route path="cities/:id" element={<CityCard />} />
           <Route
             path="countries"
             element={<Countries cities={cities} isLoading={isLoading} />}

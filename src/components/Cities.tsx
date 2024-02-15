@@ -1,4 +1,5 @@
 import { IoCloseCircle } from "react-icons/io5"; //Licence: MIT
+import { Link } from "react-router-dom";
 
 interface Props {
   cities: City[];
@@ -33,12 +34,14 @@ const Cities = ({ cities, isLoading }: Props) => {
   return (
     <ul>
       {cities.map((city) => (
-        <li className="text-base-100" key={city.id}>
-          <div className="grid grid-cols-4">
+        <li className="text-base-100 py-3" key={city.id}>
+          <div className="grid grid-cols-[10%_40%_30%_15%] gap-1">
             <div>{city.emoji}</div>
-            <div>{city.cityName}</div>
+            <Link to={`${city.id}`}>
+              <div className="hover:text-blue-500">{city.cityName}</div>
+            </Link>
             <div>{formatDate(city.date)}</div>
-            <button>
+            <button className="pl-2 hover:text-red-600">
               <IoCloseCircle />
             </button>
           </div>
