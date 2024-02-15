@@ -46,7 +46,10 @@ const App = () => {
             path="cities"
             element={<Cities cities={cities} isLoading={isLoading} />}
           />
-          <Route path="countries" element={<Countries />} />
+          <Route
+            path="countries"
+            element={<Countries cities={cities} isLoading={isLoading} />}
+          />
           <Route path="form" element={<Form />} />
         </Route>
       </Routes>
