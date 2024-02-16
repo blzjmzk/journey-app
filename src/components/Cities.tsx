@@ -37,7 +37,9 @@ const Cities = ({ cities, isLoading }: Props) => {
         <li className="text-base-100 py-3" key={city.id}>
           <div className="grid grid-cols-[10%_40%_30%_15%] gap-1">
             <div>{city.emoji}</div>
-            <Link to={`${city.id}`}>
+            <Link
+              to={`${city.id}?lat=${city.position.lat}&lng=${city.position.lng}`}
+            >
               <div className="hover:text-blue-500">{city.cityName}</div>
             </Link>
             <div>{formatDate(city.date)}</div>

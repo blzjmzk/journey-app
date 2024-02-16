@@ -1,4 +1,4 @@
-import { BrowserRouter, Form, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./pages/AppLayout";
 import Features from "./pages/Features";
 import Homepage from "./pages/Homepage";
@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
 import Cities from "./components/Cities";
 import Countries from "./components/Countries";
+import Form from "./components/Form";
 import { useEffect, useState } from "react";
 import CityCard from "./components/CityCard";
 
