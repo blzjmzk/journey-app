@@ -1,25 +1,6 @@
 import { IoCloseCircle } from "react-icons/io5"; //Licence: MIT
 import { Link } from "react-router-dom";
-
-interface Props {
-  cities: City[];
-  isLoading: boolean;
-}
-
-interface City {
-  cityName: string;
-  country: string;
-  emoji: string;
-  date: Date;
-  notes: string;
-  position: Position;
-  id: string;
-}
-
-interface Position {
-  lat: number;
-  lng: number;
-}
+import { useCities } from "../contexts/CitiesContext";
 
 const formatDate = (date: Date) =>
   new Intl.DateTimeFormat("en", {
@@ -28,7 +9,9 @@ const formatDate = (date: Date) =>
     year: "numeric",
   }).format(new Date(date));
 
-const Cities = ({ cities, isLoading }: Props) => {
+const Cities = () => {
+  const { cities, isLoading } = useCities();
+
   if (isLoading) return <span className="loading loading-spinner loading-lg" />;
   if (!cities.length) return <span>Click a city to add to your journey!</span>;
   return (

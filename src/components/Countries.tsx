@@ -1,7 +1,4 @@
-interface Props {
-  cities: City[];
-  isLoading: boolean;
-}
+import { useCities } from "../contexts/CitiesContext";
 
 interface City {
   cityName: string;
@@ -23,7 +20,9 @@ interface Position {
   lng: number;
 }
 
-const Countries = ({ cities, isLoading }: Props) => {
+const Countries = () => {
+  const { cities, isLoading } = useCities();
+
   if (isLoading) return <span className="loading loading-spinner loading-lg" />;
   if (!cities.length) return <span>Click a city to add to your journey!</span>;
 
