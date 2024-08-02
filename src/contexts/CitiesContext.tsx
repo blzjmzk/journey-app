@@ -1,18 +1,29 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  ReactNode,
+} from "react";
 import City from "../../entities/City";
 
 interface CitiesContextType {
   cities: City[];
   isLoading: boolean;
+  currentCity: City | null;
+  getCity: (id: string) => void;
+  error: string | null;
 }
 
 const CitiesContext = createContext<CitiesContextType | undefined>(undefined);
 
 const BASE_URL = "http://localhost:9000";
 
-const CitiesProvider = ({ children }: { children: React.ReactNode }) => {
-  const [cities, setCities] = useState([]);
+const CitiesProvider = ({ children }: { children: ReactNode }) => {
+  const [cities, setCities] = useState<City[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [currentCity, setCurrentCity] = useState<City | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(function () {
     async function fetchCities() {
@@ -21,8 +32,8 @@ const CitiesProvider = ({ children }: { children: React.ReactNode }) => {
         const res = await fetch(`${BASE_URL}/cities`);
         const data = await res.json();
         setCities(data);
-      } catch {
-        alert("There was an error loading data");
+      } catch (err) {
+        setError("There was an error loading data");
       } finally {
         setIsLoading(false);
       }
@@ -30,8 +41,23 @@ const CitiesProvider = ({ children }: { children: React.ReactNode }) => {
     fetchCities();
   }, []);
 
+  async function getCity(id: string) {
+    try {
+      setIsLoading(true);
+      const res = await fetch(`${BASE_URL}/cities/${id}`);
+      const data = await res.json();
+      setCurrentCity(data);
+    } catch (err) {
+      setError("There was an error loading data");
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
   return (
-    <CitiesContext.Provider value={{ cities, isLoading }}>
+    <CitiesContext.Provider
+      value={{ cities, isLoading, currentCity, getCity, error }}
+    >
       {children}
     </CitiesContext.Provider>
   );
